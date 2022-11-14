@@ -38,7 +38,7 @@ public class MyPairDeserializer extends StdDeserializer<Map<String, String>> {
         startString.append("}");
         String str = startString.toString();
         TypeReference<HashMap<String, String>> typeRef
-                = new TypeReference<>() {};
+                = new TypeReference<HashMap<String, String>>() {};
         return new ObjectMapper().readValue(str, typeRef);
     }
 }
